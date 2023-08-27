@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		td{
+			text-align: center;
+		}
+		td:not(#result_id){
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<table border="1" cellspacing="0" cellpadding="6" width="400">
+	<tr>
+		<td id="result_id" colspan="4" ></td>
+	</tr>
+	<tr>
+		<td onclick="getnum('9')">9</td>
+		<td onclick="getnum('8')">8</td>
+		<td onclick="getnum('7')">7</td>
+		<td onclick="getnum('/')">/</td>
+	</tr>
+	<tr>
+		<td onclick="getnum('6')">6</td>
+		<td onclick="getnum('5')">5</td>
+		<td onclick="getnum('4')">4</td>
+		<td onclick="getnum('')"></td>
+	</tr>
+	<tr>
+		<td onclick="getnum('3')">3</td>
+		<td onclick="getnum('2')">2</td>
+		<td onclick="getnum('1')">1</td>
+		<td onclick="getnum('-')">-</td>
+	</tr>
+	<tr>
+		<td onclick="getnum('0')">0</td>
+		<td onclick="clearall()">C</td>
+		<td onclick="getnum('=')">=</td>
+		<td onclick="getnum('+')">+</td>
+	</tr>
+	</table>
+	<script type="text/javascript">
+		// var tds=document.querySelector('#table_id td');
+		// for(var i=0;i<tds.length;i++){
+		// 	tds[i].addEventListener("click",function(){
+				
+		// 	})
+		// }
+		function getnum(val){
+			if(val == '='){
+				var res=document.getElementById('result_id').innerText;
+				document.getElementById('result_id').innerText=eval(res);
+
+			}
+			else if(val == 'C'){
+				clearall();
+			}
+			else{
+				document.getElementById('result_id').innerText+=val;
+			}
+		}
+		function clearall(){
+			var empty=document.getElementById('result_id');
+			empty.innerText='';
+		}
+
+	</script>
+</body>
+</html

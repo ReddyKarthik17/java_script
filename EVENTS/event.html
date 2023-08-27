@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EVENTS</title>
+</head>
+<body>
+	<!-- 1st way -->
+	<!-- <button onclick="test()">click here</button> -->
+	<!-- <script type="text/javascript"> -->
+		<!-- function test(){
+			alert("testing...")
+			document.body.style.backgroundColor="blue"
+		} -->
+	<!-- </script> -->
+	<button id="btn_1">remove</button>
+	<button id="btn_2">show</button>
+	<p id="sp_1">hii</p>
+	<button onclick="incrby1()">INC</button>
+	<button onclick="decrby1()">DEC</button>
+	<p id="1">OutPut</p>
+	<center>
+		<button id="button_1">showright</button>
+		<button id="button_2">
+			showright
+		</button>
+		<p id="2">IMAGES</p>
+	</center>
+		<script type="text/javascript">
+			// 2nd way
+			// let btn=document.getElementById("btn_1")
+			// btn.onclick=function {
+			// 	alert("background change")
+			// 	document.body.style.backgroundColor="green"
+			// }
+			// 3rd way
+			let btn=document.getElementById("btn_1")
+			btn.addEventListener('click',test)
+			function test(){
+				// document.body.style.backgroundColor="skyblue"
+				document.getElementById('sp_1').style.display='none'
+			}
+			let bt=document.getElementById("btn_2")
+			bt.addEventListener('click',test1)
+			function test1(){
+				// document.body.style.backgroundColor="skyblue"
+				document.getElementById('sp_1').style.display='block'
+			}
+			var i=1;
+			function incrby1(){
+				if(i<6){
+					document.getElementById('1').innerText=i++
+				}
+			}
+			function decrby1(){
+				if(i>0){
+					document.getElementById('1').innerText=i--
+				}
+			}
+			var i=2;
+			function left(){
+				if(i<6){
+					var res=i++;
+					document.getElementById('2').innerHTML="<img src='sliders/"+res+".png"'style="height:200px";width:200px'
+				}
+			}
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OPTIONS</title>
+</head>
+<body>
+	<center>
+		<p>Enter the details that are displayed on the screen and submit the form.</p>
+		<form id="myform">
+			First name:<input type="text" name="fname"><br><br>
+			Last name:<input type="text" name="lname"><br><br>
+		<select name="college">
+		<option>--select College--</option>
+		<option value="AEC">AEC</option>
+		<option value="ACET">ACET</option>
+		<option value="ACOE">ACOE</option>
+	</select>
+	<br><br>
+	<input type="button" onclick="formsubmit()" value="submit form">
+</form>
+	</center>
+	<script type="text/javascript">
+		function formsubmit(){
+			document.getElementById('myform').reset()
+		}
+	</script>
+
+</body>
+</html>

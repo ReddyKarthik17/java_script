@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM|METHODS2</title>
+</head>
+<body>
+	<p class="a">html</p>
+	<p class="a">CSS</p>
+	<p class="a">BooT</p>
+	<p class="a">Js</p>
+	<ul>
+		<li>AOC</li>
+		<li>ACET</li>
+		<li>ACOE</li>
+	</ul>
+	<table border=1>
+	   <tr>
+	   	<td></td>
+	   	<td></td>
+	   	<td></td>
+	   </tr>
+	   <tr>
+	   	<td></td>
+	   	<td></td>
+	   	<td></td>
+	   </tr>
+	   <tr>
+	   	<td></td>
+	   	<td></td>
+	   	<td></td>
+	   </tr>
+	</table>
+	<h1>ELEMENTS</h1>
+	<h2>ELEMENTS</h2>
+	<p>A p element are<span style="color: greenyellow;">span</span> inside</p>
+	<script type="text/javascript">
+		let text=document.getElementsByClassName('a')
+		text[0].innerHTML='HTML'
+		text[2].innerText='<h1>bootstrap</h1>'
+		text[1].style.color="red"
+        text[3].style.backgroundColor="green"
+        let list=document.querySelectorAll('li')
+        list.innerHTML='aditya'
+        list[1].style.backgroundColor="blue"
+        let tds=document.getElementsByTagName('td')
+        var k=9;
+        for (var i = 0; i < tds.length; i++) {
+        	tds[i].innerText=k;
+        	k--;
+        	tds[i].style.borderColor="red"
+        	tds[i].style.backgroundColor="black"
+        	tds[i].style.color="whitesmoke"
+        }
+        const nodeList=document.querySelectorAll("h1,h2,p")
+        for (var i = 0; i <nodeList.length; i++) {
+       nodeList[i].style.backgroundColor="yellow"
+        }
+	</script>
+
+</body>
+</html>
